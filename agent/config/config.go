@@ -156,7 +156,7 @@ func DefaultConfig() Config {
 		DisableMetrics:          false,
 		DockerGraphPath:         "/var/lib/docker",
 		ReservedMemory:          0,
-		AvailableLoggingDrivers: []dockerclient.LoggingDriver{dockerclient.JsonFileDriver},
+		AvailableLoggingDrivers: []dockerclient.LoggingDriver{dockerclient.JsonFileDriver, dockerclient.AwsDriver},
 		TaskCleanupWaitDuration: DefaultTaskCleanupWaitDuration,
 	}
 }
